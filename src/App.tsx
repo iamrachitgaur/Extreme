@@ -1,13 +1,14 @@
-import './App.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Dashboard, Callback } from "./pages";
+
+
+
+const router = createBrowserRouter([
+  { path: "/", element: <Dashboard /> },
+  { path: "/callback", element: <Callback /> },
+]);
 
 function App() {
-  return (
-    <>
-      <div className='bg-gray-500 h-screen w-screen'>
-        <h1>Extreme</h1>
-      </div>
-    </>
-  )
+  return <RouterProvider router={router} />;
 }
-
 export default App
